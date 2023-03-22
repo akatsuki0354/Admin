@@ -1,0 +1,29 @@
+.container .box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-flow: wrap;
+    gap: 10px;
+}
+
+select{
+    background-color: transparent;
+    border: solid 1px transparent;
+}
+
+select:focus{
+    outline: none;
+}
+
+input{
+    background-color: transparent;
+    border: solid 1px transparent;
+}
+
+input:focus{
+    outline: none;
+}
+
+.container .title{
+    border-radius: 20px 20px 0 0;
+}
