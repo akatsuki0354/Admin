@@ -8,7 +8,7 @@ html {
 nav {
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 10px;
     background-color: #0087a1b0;
     gap: 10px;
     color: white;
@@ -29,15 +29,16 @@ nav h1 {
 .main .slidebar {
     /* background-color: rgb(182, 182, 182); */
     background-color: #0cc3e754;
-    width: 330px;
+    width: 280px;
     height: 100vh;
     overflow: scroll;
     display: flex;
     border-right: solid 1px rgba(29, 169, 235, 0.5);
 }
 
-::-webkit-scrollbar {
+.slidebar::-webkit-scrollbar {
     display: none;
+    overflow: scroll;
 }
 
 .main .slidebar .btn-danger {
@@ -72,7 +73,7 @@ a {
 }
 
 .main .slidebar ul li a {
-    font-size: 35px;
+    font-size: 15px;
 }
 
 .fa-camera {
