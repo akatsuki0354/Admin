@@ -9,6 +9,8 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/defualt.css">
+    <link rel="stylesheet" href="/css/setting.css">
+    <link rel="shortcut icon" href="/img/icon.png" type="image/x-icon">
     <script src="/js/navbar.js"></script>
     <title>ICONnect</title>
 </head>
@@ -18,48 +20,125 @@
         <img src="/img/icon.png" alt="" width="100px">
         <div>
             <h1>ICONnect</h1>
-           
+
         </div>
     </nav>
     <div class="main">
         <!--slide bar-->
-       <div  style="display: flex;">
-        <div class="slidebar">
-            <ul>
-                <!-- profile -->
-                <div class="profile">
-                    <div class="img">
-                        <div class="image">
-                            <i class="fa fa-user"></i>
+        <div style="display: flex;">
+            <div class="slidebar">
+                <ul>
+                    <!-- profile -->
+                    <div class="profile">
+                        <div class="img">
+                            <div class="image">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <i class="fa fa-camera"></i>
                         </div>
-                        <i class="fa fa-camera"></i>
+                        <div class="online"></div>
+                        <p style="text-align: center;">Franco M. Gregorio</p>
                     </div>
-                    <div class="online"></div>
-                    <p style="text-align: center;">Franco M. Gregorio</p>
-                </div>
-                <li><a class="btn btn-danger" href="/home.html"><i class="fa fa-home"
-                            style="font-size: 30px;"></i> Home</a></li>
-                <hr>
-                <li><a class="btn btn-danger" href="/Createqr.html"><i class="fa fa-qrcode"
-                            style="font-size: 30px;"></i> Create QR</a></li>
-                <hr>
-                <li><a class="btn btn-danger" href="/Section.html"><i class="fa fa-plus-circle"
-                            style="font-size: 30px;"></i> Section</a></li>
-                <hr>
-                <li><a class="btn btn-danger" href="/enroll.html"><i class="fa fa-user-plus"
-                            style="font-size: 30px;"></i> Enroll</a></li>
-                <hr>
-                <li><a class="btn btn-danger  active" href="/Settings.html"><i class="fa fa-cog"
-                            style="font-size: 30px;"></i> Settings</a></li>
-                <hr>
-                <li><a href="/index.html" class="btn btn-success">logout</a></li>
-                <hr>
-            </ul>
+                    <li><a class="btn btn-danger" href="/home.html"><i class="fa fa-home" style="font-size: 30px;"></i>
+                            Home</a></li>
+                    <hr>
+                    <li><a class="btn btn-danger" href="/Createqr.html"><i class="fa fa-qrcode"
+                                style="font-size: 30px;"></i> Create QR</a></li>
+                    <hr>
+                    <li><a class="btn btn-danger" href="/Section.html"><i class="fa fa-plus-circle"
+                                style="font-size: 30px;"></i> Section</a></li>
+                    <hr>
+                    <li><a class="btn btn-danger" href="/enroll.html"><i class="fa fa-user-plus"
+                                style="font-size: 30px;"></i> Enroll</a></li>
+                    <hr>
+                    <li><a class="btn btn-danger  active" href="/Settings.html"><i class="fa fa-cog"
+                                style="font-size: 30px;"></i> Settings</a></li>
+                    <hr>
+                    <li><a href="/index.html" class="btn btn-success">logout</a></li>
+                    <hr>
+                </ul>
+            </div>
         </div>
-       </div>
         <!-- container item -->
         <div class="container">
-           
+            <nav class="navbar navbar-expand-lg navbar-primary bg-info m-3" style="border-radius: 10px 10px 0 0;">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" style="display: flex; justify-content: space-between; padding: 0px 20px ;" id="navbarNav">
+                    <div>
+                        <h1 style="font-size: 50px; margin-left: -70px;">Settings</h1>
+                        <strong>QR-Attendance Monitoring System</strong>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#" class="home-link">
+                                <i class="fa fa-shield" aria-hidden="true" style="font-size: 40px;">
+                                </i>
+                            </a>
+                            <span>Privacy</span>
+                        </li>
+                        <li>
+                            <a href="#" class="about-link">
+                                <i class="fa fa-moon-o" aria-hidden="true" style="font-size: 40px;">
+                                </i>
+                            </a>
+                            <span>Mode</span>
+                        </li>
+                        <li>
+                            <a href="#" class="contact-link">
+                                <i class="fa fa-lock" aria-hidden="true" style="font-size: 40px;">
+                                </i>
+                            </a>
+                            <span>Securtiy</span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <section class="home-content">Privacy</section>
+            <section class="about-content">Mode</section>
+            <section class="contact-content">Securtiy</section>
+
+            <script>
+                const homeLink = document.querySelector('.home-link');
+                const aboutLink = document.querySelector('.about-link');
+                const contactLink = document.querySelector('.contact-link');
+                const homeContent = document.querySelector('.home-content');
+                const aboutContent = document.querySelector('.about-content');
+                const contactContent = document.querySelector('.contact-content');
+
+                homeLink.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    homeContent.classList.add('show');
+                    aboutContent.classList.remove('show');
+                    contactContent.classList.remove('show');
+                });
+
+                aboutLink.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    aboutContent.classList.add('show');
+                    homeContent.classList.remove('show');
+                    contactContent.classList.remove('show');
+                });
+
+                contactLink.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    contactContent.classList.add('show');
+                    homeContent.classList.remove('show');
+                    aboutContent.classList.remove('show');
+                });
+            </script>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
         </div>
     </div>
 </body>
